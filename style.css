@@ -1,0 +1,88 @@
+:root {
+    --border-style: 5px solid white;
+}
+
+body {
+    background-color: #000;
+    user-select: none;
+    color: white;
+    font-family: 'Quicksand';
+    font-size: 2rem;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-rows: 7fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "board"
+        "output";
+}
+
+@media (orientation: landscape) {
+    main {
+        width: 70vh;
+        height: 80vh;
+    }
+}
+
+@media (orientation: portrait) {
+    main {
+        width: 70vw;
+        height: 80vw;
+    }
+}
+
+#board {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: board;
+    display: grid;
+    grid-auto-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "C0 C1 C2"
+        "C3 C4 C5"
+        "C6 C7 C8";
+}
+
+#C0, #C1, #C2 {
+    border-bottom: var(--border-style);
+}
+
+#C6, #C7, #C8 {
+    border-top: var(--border-style);
+}
+
+#C0, #C3, #C6 {
+    border-right: var(--border-style);
+}
+
+#C2, #C5, #C8 {
+    border-left: var(--border-style);
+}
+
+#output {
+    position: relative;
+    grid-area: output;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#icon {
+    width: 50%;
+    height: 50%;
+}
+
+.cell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
