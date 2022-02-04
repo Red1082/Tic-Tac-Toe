@@ -1,3 +1,3 @@
 # Tic-Tac-Toe
 
-You can play it here: https://tictactoe-red1082.netlify.app/
+An implementation in vanilla JavaScript of the classic tic-tac-toe game!
