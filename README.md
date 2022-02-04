@@ -1,3 +1,3 @@
 # Tic-Tac-Toe
 
-An implementation in vanilla JavaScript of the classic tic-tac-toe game!
+An implementation of the classic tic-tac-toe game in vanilla JavaScript.
